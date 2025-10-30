@@ -10,5 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5.0.0
+
       - name: Print a welcome message
         run: echo "Welcome to our CI/CD"
+
+      - name: List repository files
+        run: ls -la
+
+
+        
