@@ -1,13 +1,14 @@
-name : First Woekflow
+name: First Workflow
 
 on:
-  push: 
+  push:
     branches:
-       -main:
-jobs:
-   example-job:
-      runs-on: ubuntu-latest
+      - main
 
-      steps:
-        - name: print a welcome message
-          run : echo "welcome to our cicd "
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print a welcome message
+        run: echo "Welcome to our CI/CD"
