@@ -24,3 +24,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+
+      - name: Give test.sh execute permission
+        run: chmod +x src/test.sh
+
+      - name: Run tests
+        run: ./src/test.sh
+
+      - name: Show test passed
+        if: ${{ success() }}
+        run: echo "test passed ✅"
