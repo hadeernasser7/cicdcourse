@@ -4,6 +4,7 @@ function greet(name) {
 
 module.exports = greet;
 
-//if (require.main === module) {
+// تشغيل الكود مباشرة لو الملف رئيسي (اختياري)
+if (require.main === module) {
     console.log(greet("World"));
 }
